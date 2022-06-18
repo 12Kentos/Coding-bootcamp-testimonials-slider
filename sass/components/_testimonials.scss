@@ -1,0 +1,197 @@
+.testimonials {
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #202047;
+    position: relative;
+    transform: translateX(15rem);
+    z-index: 2;
+
+    &::before {
+      content: "";
+      width: 12rem;
+      height: 10rem;
+      background-image: url(../images/pattern-quotes.svg);
+      background-repeat: none;
+      position: absolute;
+      left: 9.5rem;
+      top: -6.4rem;
+    }
+  }
+
+  &__paragraph {
+    max-width: 63.5rem;
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 4.4rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__author-info {
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    line-height: 3.8rem;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__title {
+    font-weight: 500;
+    color: $color-secondary-text;
+  }
+
+  &__picture {
+    width: 71.1rem;
+    height: 69.7rem;
+    background-image: url(../images/pattern-bg.svg);
+    background-position: 1.4rem 1.4rem;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__img {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    width: 54rem;
+  }
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.8rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    position: absolute;
+    left: 15rem;
+    bottom: 5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__left-arrow {
+    padding: 1.4rem 1.8rem;
+  }
+
+  &__right-arrow {
+    padding: 1.4rem 1.8rem;
+  }
+}
+
+.john,
+.tanya {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.testimonials__text-tanya,
+.testimonials__text-john {
+  display: none;
+}
+
+.text-active {
+  display: flex;
+}
+
+@media (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 47.25em) {
+  html {
+    font-size: 39%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    flex-direction: column-reverse;
+    justify-content: center;
+    background-size: 90%;
+    background-position: 0vw 88vh;
+  }
+
+  .testimonials {
+    &__text {
+      color: #202047;
+      position: relative;
+      transform: none;
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        width: 6rem;
+        height: 5rem;
+        background-size: contain;
+        left: 12.5rem;
+        top: -2.4rem;
+      }
+    }
+
+    &__paragraph {
+      max-width: 80vw;
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+      margin-bottom: 1.9rem;
+      text-align: center;
+    }
+
+    &__author-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &__picture {
+      width: 44rem;
+      height: 42rem;
+      background-image: url(../images/pattern-bg.svg);
+      background-position: 3.5rem -3px;
+      background-repeat: no-repeat;
+      background-size: 83%;
+    }
+
+    &__img {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      border-radius: 0.5rem;
+      width: 75vw;
+      margin-bottom: 7.7rem;
+    }
+
+    &__arrows {
+      left: 17.7rem;
+      bottom: 9.3rem;
+    }
+
+    &__left-arrow {
+      padding: 1rem 1.2rem;
+    }
+
+    &__right-arrow {
+      padding: 1rem 1.2rem;
+    }
+  }
+}
